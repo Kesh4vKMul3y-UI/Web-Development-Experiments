@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation Example</title>
+
+  <script>
+    // Function called when form is submitted
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      if (name === "") {
+        alert("Name is required!");
+        return false; // Prevent form submission
+      }
+
+      if (email === "") {
+        alert("Email is required!");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true; // Allow form submission
+    }
+
+    // Function called while typing in name field
+    function checkName() {
+      let name = document.getElementById("name").value;
+
+      if (name.length < 3) {
+        document.getElementById("nameMsg").innerText =
+          "Name must be at least 3 characters";
+      } else {
+        document.getElementById("nameMsg").innerText = "";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Registration Form</h2>
+
+  <!-- onsubmit event -->
+  <form onsubmit="return validateForm()">
+    
+    Name:
+    <input type="text" id="name" oninput="checkName()">
+    <span id="nameMsg" style="color:red;"></span>
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Div and Span Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      width: 450px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .banner h1 {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #764ba2;
+    }
+
+    .info {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1>About Me</h1>
+
+    <div class="info">
+      Hello, I am <span class="highlight">Keshav K Muley</span> and I am intrested in
+      <span class="highlight">AI/ML.</span>
+    </div>
+
+    <div class="info">
+      Currently Pursuing <span class="highlight">CSE Core</span>
+      at <span class="highlight">Rungta International Skills University.</span>
+    </div>
+  </div>
+
+</body>
+</html>

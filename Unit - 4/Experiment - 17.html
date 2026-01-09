@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #log {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Listener Example</h1>
+
+  <button id="toggleBtn">Enable Keyboard Listener</button>
+
+  <div id="box">Hover me</div>
+
+  <p id="log">Press a key or interact with the box</p>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const box = document.getElementById("box");
+    const log = document.getElementById("log");
+
+    let keyboardEnabled = false;
+
+    // Mouse Events
+    box.addEventListener("mouseenter", () => {
+      box.style.backgroundColor = "lightblue";
+      log.textContent = "Mouse entered the box";
+    });
+
+    box.addEventListener("mouseleave", () => {
+      box.style.backgroundColor = "lightgray";
+      log.textContent = "Mouse left the box";
+    });
+
+    box.addEventListener("click", () => {
+      log.textContent = "Box clicked!";
+    });
+
+    // Keyboard Event Function
+    function handleKeyPress(event) {
+      log.textContent = `Key pressed: ${event.key}`;
+    }
+
+    // Toggle keyboard event listener
+    toggleBtn.addEventListener("click", () => {
+      if (!keyboardEnabled) {
+        document.addEventListener("keydown", handleKeyPress);
+        toggleBtn.textContent = "Disable Keyboard Listener";
+        log.textContent = "Keyboard listener enabled";
+        keyboardEnabled = true;
+      } else {
+        document.removeEventListener("keydown", handleKeyPress);
+        toggleBtn.textContent = "Enable Keyboard Listener";
+        log.textContent = "Keyboard listener disabled";
+        keyboardEnabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>

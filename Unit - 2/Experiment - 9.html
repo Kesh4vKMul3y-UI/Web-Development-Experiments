@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Website</title>
+
+  <style>
+    /* ---------- Mobile First Base Styles ---------- */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      text-align: center;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    .card {
+      background: #f4f4f4;
+      margin-bottom: 1rem;
+      padding: 1.2rem;
+      border-radius: 0.5rem;
+    }
+
+    h1 {
+      font-size: 6vw;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* ---------- Tablet View ---------- */
+    @media (min-width: 600px) {
+      nav a {
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .cards {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .card {
+        width: 50%;
+      }
+    }
+
+    /* ---------- Desktop View ---------- */
+    @media (min-width: 900px) {
+      .card {
+        width: 33.33%;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* ---------- Large Screen ---------- */
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>My Responsive Website</h1>
+    <p>Mobile-First Design using Media Queries</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>
+          We create modern, responsive, and user-friendly website designs
+          that work on all devices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Development</h3>
+        <p>
+          Our development ensures fast, secure, and scalable web applications
+          using the latest technologies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Support</h3>
+        <p>
+          We provide 24/7 support to help you maintain and grow your online
+          presence.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

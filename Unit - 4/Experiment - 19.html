@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Drawing Example</title>
+</head>
+<body>
+
+  <h2>Simple Canvas Drawing</h2>
+
+  <!-- Canvas element -->
+  <canvas id="myCanvas" width="400" height="300" style="border:1px solid black;">
+    Your browser does not support canvas.
+  </canvas>
+
+  <script>
+    // Get canvas and context
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Rectangle
+    ctx.fillStyle = "skyblue";
+    ctx.fillRect(20, 20, 120, 80);
+
+    // Line
+    ctx.beginPath();
+    ctx.moveTo(20, 130);
+    ctx.lineTo(200, 130);
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Circle
+    ctx.beginPath();
+    ctx.arc(250, 70, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = "orange";
+    ctx.fill();
+    ctx.stroke();
+
+    // Rectangle Outline
+    ctx.strokeStyle = "green";
+    ctx.strokeRect(220, 150, 120, 80);
+  </script>
+
+</body>
+</html>

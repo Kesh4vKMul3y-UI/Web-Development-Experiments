@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    form {
+      max-width: 500px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin: 8px 0 4px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Registration Form</h1>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email">
+    </fieldset>
+
+    <fieldset>
+      <legend>Gender</legend>
+
+      <label>
+        <input type="radio" name="gender" value="male"> Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female"> Female
+      </label>
+      <label>
+        <input type="radio" name="gender" value="other"> Other
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Skills</legend>
+
+      <label>
+        <input type="checkbox" name="skills" value="html"> HTML
+      </label>
+      <label>
+        <input type="checkbox" name="skills" value="css"> CSS
+      </label>
+      <label>
+        <input type="checkbox" name="skills" value="javascript"> JavaScript
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Country</legend>
+
+      <label for="country">Select your country:</label>
+      <select id="country" name="country">
+        <option value="">--Choose--</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="india">India</option>
+        <option value="other">Other</option>
+      </select>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
+</body>
+</html>

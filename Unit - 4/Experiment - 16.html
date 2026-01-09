@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show and Hide Example</title>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .highlight {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 id="text">Hello! This text can be shown or hidden.</h2>
+
+  <button onclick="toggleText()">Show / Hide Text</button>
+  <button onclick="toggleStyle()">Toggle Highlight</button>
+
+  <script>
+    function toggleText() {
+      const textElement = document.getElementById("text");
+
+      // Toggle visibility
+      textElement.classList.toggle("hidden");
+    }
+
+    function toggleStyle() {
+      const textElement = document.getElementById("text");
+
+      // Toggle CSS class
+      textElement.classList.toggle("highlight");
+    }
+  </script>
+
+</body>
+</html>
